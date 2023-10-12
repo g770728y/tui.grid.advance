@@ -601,7 +601,7 @@ export default class Grid implements TuiGrid {
    *     @returns {Array} [range.start] - Index info of start selection (ex: [rowIndex, columnIndex])
    *     @returns {Array} [range.end] - Index info of end selection (ex: [rowIndex, columnIndex])
    */
-  public getSelectionRange() {
+  public getSelectionRange(): {start: Range; end: Range} | null {
     const { rangeWithRowHeader } = this.store.selection;
 
     if (rangeWithRowHeader) {

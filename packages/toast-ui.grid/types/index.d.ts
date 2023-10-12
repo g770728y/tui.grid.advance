@@ -1,7 +1,14 @@
 // Type definitions for TOAST UI Grid v4.21.17
 // TypeScript Version: 3.9.5
 
-import { CellValue, InvalidRow, Row, RowKey, RowSpan, SortState } from './store/data';
+import {
+  CellValue,
+  InvalidRow,
+  Row,
+  RowKey,
+  RowSpan,
+  SortState,
+} from './store/data';
 import { SummaryColumnContentMap, SummaryValueMap } from './store/summary';
 import { ColumnInfo } from './store/column';
 import { Range } from './store/selection';
@@ -30,7 +37,11 @@ import {
   RequestOptions,
   RequestType,
 } from './dataSource';
-import { Filter, FilterOptionType, FilterState } from './store/filterLayerState';
+import {
+  Filter,
+  FilterOptionType,
+  FilterState,
+} from './store/filterLayerState';
 import { MenuItem } from './store/contextMenu';
 import { OptExport } from './store/export';
 
@@ -59,7 +70,10 @@ export interface Pagination {
 
 declare namespace tui {
   export class Grid {
-    public static applyTheme(presetName: OptThemePresetNames, extOptions?: OptPreset): void;
+    public static applyTheme(
+      presetName: OptThemePresetNames,
+      extOptions?: OptPreset
+    ): void;
 
     public static setLanguage(localeCode: string, data?: OptI18nData): void;
 
@@ -80,6 +94,7 @@ declare namespace tui {
     public showColumn(columnName: string): void;
 
     public setSelectionRange(range: { start: Range; end: Range }): void;
+    public getSelectionRange(): { start: Range; end: Range } | null;
 
     public getFocusedCell(): {
       rowKey: string | number | null;
@@ -89,17 +104,37 @@ declare namespace tui {
 
     public blur(): void;
 
-    public focus(rowKey: RowKey, columnName: string, setScroll?: boolean): boolean;
+    public focus(
+      rowKey: RowKey,
+      columnName: string,
+      setScroll?: boolean
+    ): boolean;
 
-    public focusAt(rowIndex: number, columnIndex: number, setScroll?: boolean): boolean;
+    public focusAt(
+      rowIndex: number,
+      columnIndex: number,
+      setScroll?: boolean
+    ): boolean;
 
     public activateFocus(): void;
 
-    public startEditing(rowKey: RowKey, columnName: string, setScroll?: boolean): void;
+    public startEditing(
+      rowKey: RowKey,
+      columnName: string,
+      setScroll?: boolean
+    ): void;
 
-    public startEditingAt(rowIndex: number, columnIndex: number, setScroll?: boolean): void;
+    public startEditingAt(
+      rowIndex: number,
+      columnIndex: number,
+      setScroll?: boolean
+    ): void;
 
-    public finishEditing(rowKey?: RowKey, columnName?: string, value?: string): void;
+    public finishEditing(
+      rowKey?: RowKey,
+      columnName?: string,
+      value?: string
+    ): void;
 
     public setValue(rowKey: RowKey, columnName: string, value: CellValue): void;
 
@@ -150,9 +185,15 @@ declare namespace tui {
 
     public getCheckedRows(): Row[];
 
-    public findRows(conditions: ((row: Row) => boolean) | Dictionary<any>): Row[];
+    public findRows(
+      conditions: ((row: Row) => boolean) | Dictionary<any>
+    ): Row[];
 
-    public sort(columnName: string, ascending: boolean, multiple?: boolean): void;
+    public sort(
+      columnName: string,
+      ascending: boolean,
+      multiple?: boolean
+    ): void;
 
     public unsort(columnName?: string): void;
 
@@ -206,11 +247,19 @@ declare namespace tui {
 
     public resetData(data: OptRow[], options?: ResetOptions): void;
 
-    public addCellClassName(rowKey: RowKey, columnName: string, className: string): void;
+    public addCellClassName(
+      rowKey: RowKey,
+      columnName: string,
+      className: string
+    ): void;
 
     public addRowClassName(rowKey: RowKey, className: string): void;
 
-    public removeCellClassName(rowKey: RowKey, columnName: string, className: string): void;
+    public removeCellClassName(
+      rowKey: RowKey,
+      columnName: string,
+      className: string
+    ): void;
 
     public removeRowClassName(rowKey: RowKey, className: string): void;
 
@@ -287,7 +336,11 @@ declare namespace tui {
 
     public setRows(rows: OptRow[]): void;
 
-    public moveRow(rowKey: RowKey, targetIndex: number, options: OptMoveRow): void;
+    public moveRow(
+      rowKey: RowKey,
+      targetIndex: number,
+      options: OptMoveRow
+    ): void;
 
     public setRequestParams(params: Dictionary<any>): void;
 
