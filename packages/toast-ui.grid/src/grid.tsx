@@ -1795,6 +1795,7 @@ export default class Grid implements TuiGrid {
    * @param {number} targetIndex - Target index for moving
    * @param {Object} [options] - Options
    * @param {number} [options.appended] - This option for only tree data. Whether the row is appended to other row as the child.
+   * 追加说明: 如果appended为true, 表示将 row添加为 targetIndex 的 最后一个子节点
    */
   public moveRow(rowKey: RowKey, targetIndex: number, options: OptMoveRow = { appended: false }) {
     const { column, data } = this.store;
