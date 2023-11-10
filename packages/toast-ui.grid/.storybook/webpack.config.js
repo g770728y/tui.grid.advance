@@ -14,11 +14,6 @@ module.exports = ({ config, mode }) => {
         },
       ],
     },
-    {
-      test: /\.(ts|tsx)$/,
-      exclude: /node_modules/,
-      loader: 'eslint-loader',
-    }
   );
 
   config.resolve.alias = { '@t': path.resolve('types') };

@@ -88,6 +88,8 @@ import { getFilterState } from './query/filter';
 import { execCopy } from './dispatch/clipboard';
 import { clearTreeRowKeyMap } from './store/helper/tree';
 
+declare const module:any;
+declare const require: any;
 /* eslint-disable global-require */
 if ((module as any).hot) {
   require('preact/devtools');
