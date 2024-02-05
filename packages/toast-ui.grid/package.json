@@ -1,8 +1,8 @@
 {
   "name": "valor-grid",
-  "version": "4.21.17",
+  "version": "4.21.23",
   "description": "TOAST UI Grid : Powerful data grid control supported by TOAST UI",
-  "main": "dist/tui-grid.js",
+  "main": "dist/valor-grid.js",
   "types": "types/index.d.ts",
   "scripts": {
     "check-types": "tsc",
