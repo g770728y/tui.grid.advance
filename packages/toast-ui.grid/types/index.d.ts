@@ -1,4 +1,4 @@
-// Type definitions for TOAST UI Grid v4.21.17
+// Type definitions for TOAST UI Grid v4.21.22
 // TypeScript Version: 3.9.5
 
 import {
@@ -45,12 +45,15 @@ import {
 import { MenuItem } from './store/contextMenu';
 import { OptExport } from './store/export';
 
+
 type InternalProp =
   | 'sortKey'
   | 'uniqueKey'
   | 'rowSpanMap'
   | '_relationListItemMap'
   | '_disabledPriority';
+
+export function isEditableCell(store: any, rowIndex: number, columnName: string): boolean;
 
 export interface Pagination {
   getCurrentPage(): number;
